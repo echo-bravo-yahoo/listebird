@@ -1,6 +1,30 @@
 import { JSDOM } from "jsdom";
+import table from "text-table";
 
-export function processHTML(listListHTML) {
+export function processHTML(listListHTML, format) {
+  const jsonList = HTMLToJSON(listListHTML);
+
+  if (format === "json") {
+    return JSON.stringify(jsonList, null, 2);
+  } else {
+    return JSONToText(jsonList);
+  }
+}
+
+function JSONToText(jsonList) {
+  const headers = ["index", "species", "FO date", "FO region", "FO location"];
+  var t = jsonList.map((row) => [
+    row.index,
+    row.species,
+    row.firstObservation.date,
+    row.firstObservation.region,
+    row.firstObservation.location,
+  ]);
+
+  return table([headers, ...t], { align: ["l", "l", "l", "l", "l"] });
+}
+
+function HTMLToJSON(listListHTML) {
   let observations = Array.from(
     JSDOM.fragment(listListHTML).querySelectorAll(
       "#nativeNatProv .Observation--sightingsList"

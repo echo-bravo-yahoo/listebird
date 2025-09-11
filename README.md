@@ -12,6 +12,7 @@ this is not entirely intended use of ebird's single sign-on infrastructure. plea
 
 - install listebird with `npm install --global listebird`
 - run `listebird --username 'myusername' --password 'mypassword'`. you can also provide these arguments as environment variables (e.g., `LISTEBIRD_USERNAME='myusername' LISTEBIRD_PASSWORD='mypassword' listebird`).
+  - note: you can produce text tables instead of JSON output with the flag `--format='text'` or env variable `LISTEBIRD_FORMAT='text'`.
 
 ### how (to pronounce)
 
