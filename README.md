@@ -22,14 +22,13 @@ json format:
       "region": "US-AK",
       "regionLink": "/lifelist?r=US-AK&time=life"
     }
-  },
-  ...
+  }
 ]
 ```
 
 text format:
 
-```json
+```
 index  species                   FO date      FO region  FO location
 1      Bald Eagle                21 May 2024  US-AK      Gastineau Channel
 2      Steller's Jay             22 May 2024  US-AK      Skagway--Pullen Pond & Creek
