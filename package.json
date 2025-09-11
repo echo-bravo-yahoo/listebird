@@ -1,6 +1,9 @@
 {
   "name": "listebird",
   "version": "1.0.0",
+  "bin": {
+    "listebird": "./index.js"
+  },
   "description": "",
   "type": "module",
   "license": "ISC",

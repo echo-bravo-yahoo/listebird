@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import parser from "yargs-parser";
 
 import { processHTML } from "./data.js";
